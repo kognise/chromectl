@@ -2,8 +2,8 @@
 set -e
 
 apt-get update
-apt-get install -y chromium-browser pulseaudio supervisor x11vnc fluxbox
-# apt-get clean -y
+apt-get install -y chromium-browser pulseaudio supervisor x11vnc fluxbox -o Dpkg::Progress-Fancy="1"
+apt-get clean -y
 
 rm -rf /var/cache/* /var/log/apt/* /var/lib/apt/lists/* /tmp/*
 useradd -m -G pulse-access chrome 
