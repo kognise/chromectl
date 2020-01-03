@@ -1,0 +1,11 @@
+{
+  "name": "ChromeCTL",
+  "version": "1.0",
+  "description": "ChromeCTL extension, not for consumer use",
+  "permissions": [ "tabs" ],
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": true
+  },
+  "manifest_version": 2
+}
