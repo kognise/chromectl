@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
+echo '--------------------- UPDATING APT CACHE ---------------------'
 apt-get update
-apt-get install -y chromium-browser pulseaudio supervisor x11vnc fluxbox -o Dpkg::Progress-Fancy="1"
+echo '--------------------- INSTALLING USER TOOLS ---------------------'
+apt-get install -y chromium-browser pulseaudio
+echo '--------------------- INSTALLING SUPERVISOR ---------------------'
+apt-get install -y supervisor
+echo '--------------------- INSTALLING DESKTOP SYSTEMS ---------------------'
+apt-get install -y x11vnc fluxbox
 apt-get clean -y
 
 rm -rf /var/cache/* /var/log/apt/* /var/lib/apt/lists/* /tmp/*
