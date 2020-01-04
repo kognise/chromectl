@@ -8,7 +8,7 @@ apt-get install -y chromium-browser pulseaudio
 echo '--------------------- INSTALLING SUPERVISOR ---------------------'
 apt-get install -y supervisor
 echo '--------------------- INSTALLING DESKTOP SYSTEMS ---------------------'
-apt-get install -y x11vnc fluxbox
+apt-get install -y xvfb x11vnc fluxbox
 apt-get clean -y
 
 rm -rf /var/cache/* /var/log/apt/* /var/lib/apt/lists/* /tmp/*
