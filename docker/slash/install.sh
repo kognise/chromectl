@@ -3,12 +3,25 @@ set -e
 
 echo '--------------------- UPDATING APT CACHE ---------------------'
 apt-get update
+
+echo ''
 echo '--------------------- INSTALLING USER TOOLS ---------------------'
 apt-get install -y chromium-browser pulseaudio
+
+echo ''
 echo '--------------------- INSTALLING SUPERVISOR ---------------------'
 apt-get install -y supervisor
-echo '--------------------- INSTALLING DESKTOP SYSTEMS ---------------------'
-apt-get install -y xvfb x11vnc fluxbox
+
+echo ''
+echo '--------------------- INSTALLING DESKTOP MANAGER ---------------------'
+apt-get install -y fluxbox
+
+echo ''
+echo '--------------------- INSTALLING VNC SERVER ---------------------'
+apt-get install -y tigervnc-standalone-server
+
+echo ''
+echo '--------------------- CLEANING APT ---------------------'
 apt-get clean -y
 
 rm -rf /var/cache/* /var/log/apt/* /var/lib/apt/lists/* /tmp/*
