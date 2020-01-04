@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-CONFPATH=/etc/apt/apt.conf.d/01proxy 
-APT_PROXY_PORT=$1
+CONFPATH=/etc/apt/apt.conf.d/01proxy
 HOST_IP=$(awk '/^[a-z0-9]+\t00000000/ { printf("%d.%d.%d.%d\n", "0x" substr($3, 7, 2), "0x" substr($3, 5, 2), "0x" substr($3, 3, 2), "0x" substr($3, 1, 2)) }' < /proc/net/route)
 
 if [[ ! -z "$APT_PROXY_PORT" ]] && [[ ! -z "$HOST_IP" ]]; then
